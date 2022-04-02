@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Option - PS Store TitleID Link Redirector</title>
+    <script src="option.js"></script>
+    <style>
+        body {
+            font-family: 'メイリオ', Meiryo, Arial, sans-serif;
+            background-color: #DDDDDD;
+            font-size: 14px;
+            margin: 0 auto;
+            width: 800px
+        }
+
+        #title {
+            text-align: center;
+            font-size: 30px;
+            width: 800px;
+            padding-bottom: 15px;
+            border-bottom: solid 1px #000000;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        div{
+            margin: 30px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 id="title">オプション - PS Store TitleID Link Redirector</h1>
+    </header>
+
+    <div id="code-option-wrapper">
+        <h2>オプション</h2>
+        <p>プロダクトIDの取得に失敗した場合、およびURL中に国/言語コードが無い場合に使用するコード<br>
+            ※1と2でそれぞれ異なるコードを選択してください。</p>
+        <ol>
+            <li></li>
+            <li></li>
+        </ol>
+    </div>
+
+    <div id="desc">
+        <h2>動作説明</h2>
+        <h4>URL中に国/言語コードがある場合</h4>
+        (URL例: <a href="https://store.playstation.com/#!/ja-jp/tid=CUSA12540_00"
+            target="_blank">https://store.playstation.com/#!/ja-jp/tid=CUSA12540_00</a>)
+        <ol>
+            <li>URL中のコードを使用してchihiroのjsonのURLを作成し、プロダクトIDの取得を試みる。<br>
+            (成功したらそのプロダクトIDでPS StoreのURLを作成し、アクセスして終了。)</li>
+            <li>オプションの1, 2で指定したコードを使用して同様の処理。<br>
+            (最初に使用したコードが指定されている場合、そのコードを用いた処理はスキップ。)</li>
+            <li>プロダクトIDが取得出来ない場合はPS Storeのトップページにアクセスして終了。</li>
+        </ol>
+
+        <h4>URL中に国/言語コードが無い場合</h4>
+        <span>(URL例: <a href="https://store.playstation.com/#!/tid=CUSA00744_00" target="_blank">https://store.playstation.com/#!/tid=CUSA00744_00</a>)</span>
+        <ol>
+            <li>オプションの1, 2で指定したコードを使用してchihiroのjsonのURLを作成し、プロダクトIDの取得を試みる。<br>
+                (成功したらそのプロダクトIDでPS StoreのURLを作成し、アクセスして終了。)</li>
+            <li>プロダクトIDが取得出来ない場合はPS Storeのトップページにアクセスして終了。</li>
+        </ol>
+    </div>
+
+</body>
+
+</html>

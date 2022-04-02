@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "priority": 1,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "extensionPath": "/redirect.html"
+            }
+        },
+        "condition": {
+            "regexFilter": "^(https?:\/\/store.playstation.com\/#!\/)([a-zA-Z]{2}-([a-zA-Z]{4}-)?[a-zA-Z]{2}\/)?tid=CUSA\\d{5}_\\d{2}.*",
+            "resourceTypes": [
+                "main_frame"
+            ]
+        }
+    }
+]
